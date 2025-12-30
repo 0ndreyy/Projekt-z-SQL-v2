@@ -32,13 +32,13 @@ V ostatních odvětvích byly roky, kdy meziročně průměrná mzda klesla. Kon
 Rok 2013 byl rokem, kdy mzdy klesly ve většině sledovaných odvětví.
 
 ### 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
-V roce 2006 byla průměrná mzda 20 753,78 Kč. Za ni bylo možné koupit:
-- 1 437,46 l mléka
-- 1 287,16 kg chleba
+V roce 2006 byla průměrná mzda 20 753,79 Kč. Za ni bylo možné koupit:
+- 1 437,24 l mléka
+- 1 287,46 kg chleba
 
 V roce 2018 byla průměrná mzda 32 535,86 Kč. Za ni bylo možné koupit:
-- 1 641,77 l mléka
-- 1 342,32 kg chleba
+- 1 641,57 l mléka
+- 1 342,24 kg chleba
 
 Ceny potravin za dřívější nebo pozdější období nejsou dostupné.
 
@@ -47,7 +47,7 @@ Na základě dostupných dat je viditelná deflace u potraviny cukr krystalový,
 
 ### 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 V analyzovaném období takový rok neexistuje. Největší rozdíl v meziročním růstu potravin a mezd byl v roce 2013 a činil 6,66 procentního bodu. V daném roce mzdy meziročně klesly o 1,56 % a ceny potravin meziročně vzrostly o 5,10 %.
-Naopak, nejnižší rozdíl byl v roce 2009, když mzdy vzrostly o 3,16 %, ceny klesly o 6,41 % a rozdíl činil -9,57 procentního bodu.
+Naopak, nejnižší rozdíl byl v roce 2009, když mzdy vzrostly o 3,16 %, ceny klesly o 6,42 % a rozdíl činil -9,58 procentního bodu.
 
 ### 5. Má výše HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 Na základě dostupných dat není možné tuto závislost jednoznačně potvrdit.

@@ -2,7 +2,7 @@ CREATE TABLE t_ondrej_petru_project_SQL_primary_final AS WITH prumerne_mzdy AS (
 	SELECT czechia_payroll.payroll_year AS rok,
 		czechia_payroll.industry_branch_code AS kod_odvetvi,
 		czechia_payroll_industry_branch.name AS odvetvi,
-		AVG(czechia_payroll.value)::numeric AS prumerna_mzda
+		ROUND(AVG(czechia_payroll.value)::numeric, 2) AS prumerna_mzda
 	FROM czechia_payroll
 		LEFT JOIN czechia_payroll_industry_branch ON czechia_payroll.industry_branch_code = czechia_payroll_industry_branch.code
 	WHERE czechia_payroll.industry_branch_code IS NOT NULL
@@ -18,7 +18,7 @@ prumerne_ceny_potravin AS (
 		) AS rok,
 		czechia_price.category_code AS kod_potraviny,
 		czechia_price_category.name AS potravina,
-		AVG(czechia_price.value)::numeric AS prumerna_cena
+		ROUND(AVG(czechia_price.value)::numeric, 2) AS prumerna_cena
 	FROM czechia_price
 		LEFT JOIN czechia_price_category ON czechia_price.category_code = czechia_price_category.code
 	WHERE czechia_price.category_code IS NOT NULL
