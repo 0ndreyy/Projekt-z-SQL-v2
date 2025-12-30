@@ -17,7 +17,7 @@ V ostatních odvětvích byly roky, kdy meziročně průměrná mzda klesla. Kon
 - Informační a komunikační činnosti - 2013
 - Kulturní, zábavní a rekreační činnosti - 2011 a 2013
 - Peněžnictví a pojišťovnictví - 2013
-- Profesní, veděcké a technické činnosti - 2010 a 2013
+- Profesní, vědecké a technické činnosti - 2010 a 2013
 - Stavebnictví - 2013
 - Těžba a dobývání - 2009, 2013, 2014 a 2016
 - Ubytování a stravování - 2009 a 2011
@@ -32,18 +32,18 @@ V ostatních odvětvích byly roky, kdy meziročně průměrná mzda klesla. Kon
 Rok 2013 byl rokem, kdy mzdy klesly ve většině sledovaných odvětví.
 
 ### 2. Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
-V roce 2006 byla průměrná mzda 20 753,79 Kč. Za ni bylo možné koupit:
-- 1 437,24 l mléka
-- 1 287,46 kg chleba
+V roce 2006 byla průměrná mzda 20 753,78 Kč. Za ni bylo možné koupit:
+- 1 437,46 l mléka
+- 1 287,16 kg chleba
 
 V roce 2018 byla průměrná mzda 32 535,86 Kč. Za ni bylo možné koupit:
-- 1 641,57 l mléka
-- 1 342,24 kg chleba
+- 1 641,77 l mléka
+- 1 342,32 kg chleba
 
 Ceny potravin za dřívější nebo pozdější období nejsou dostupné.
 
 ### 3. Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší procentuální meziroční nárůst)? 
-Cukr krystal - průměrně meziročně zlevňuje o 1,92 %.
+Na základě dostupných dat je viditelná deflace u potraviny cukr krystalový, který meziročně zlevňuje průměrně o 1,92 %.
 
 ### 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 V analyzovaném období takový rok neexistuje. Největší rozdíl v meziročním růstu potravin a mezd byl v roce 2013 a činil 6,66 procentního bodu. V daném roce mzdy meziročně klesly o 1,56 % a ceny potravin meziročně vzrostly o 5,10 %.
@@ -54,7 +54,7 @@ Na základě dostupných dat není možné tuto závislost jednoznačně potvrdi
 
 Nejednoznačnost této závislosti je možné demonstrovat na dvou rocích s největším meziročním růstem HDP - rok 2007 s růstem 5,57 % a rok 2015 s růstem 5,39 %.
 Meziroční růst mezd v daných rocích byl 6,84 % a 2,51 %, meziroční růst mezd o rok později byl 7,87 % a 3,65 %.
-Meziroční růst cen v daných rocích byl 6,76 % a -0,55 %, meziroční růst cen o rok později byl 6,19 % a -1,19 %.
+Meziroční růst cen potravin v daných rocích byl 6,76 % a -0,55 %, meziroční růst cen o rok později byl 6,19 % a -1,19 %.
 Takže zatímco růst HDP byl v daných rocích podobný, růsty mezd i cen se výrazně lišily.
 
 Stejně tak je možné najít roky, kdy byl meziroční růst HDP výrazně menší než v rocích z předchozího příkladu (2,69 % v roce 2008 a 3,2 % v roce 2018), ale meziroční růst mezd v daných letech byl vyšší (7,87 %, resp. 7,62 %).

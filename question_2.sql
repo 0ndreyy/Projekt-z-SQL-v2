@@ -22,14 +22,14 @@ prumerne_ceny_chleba AS(
 	WHERE potravina = 'Chléb konzumní kmínový'
 )
 SELECT
-	pm.rok,
-	pm.prumerna_mzda,
-	(pm.prumerna_mzda / pcm.prumerna_cena) AS pocet_l_mleka,
-	(pm.prumerna_mzda / pcc.prumerna_cena) AS pocet_ks_chleba
-FROM prumerne_mzdy AS pm
-JOIN prumerne_ceny_mleka AS pcm
-	ON pm.rok = pcm.rok
-JOIN prumerne_ceny_chleba AS pcc
-	ON pm.rok = pcc.rok
+	prumerne_mzdy.rok,
+	ROUND(prumerne_mzdy.prumerna_mzda, 2) AS prumerna_mzda,
+	ROUND((prumerne_mzdy.prumerna_mzda / prumerne_ceny_mleka.prumerna_cena), 2) AS pocet_l_mleka,
+	ROUND((prumerne_mzdy.prumerna_mzda / prumerne_ceny_chleba.prumerna_cena), 2) AS pocet_ks_chleba
+FROM prumerne_mzdy
+JOIN prumerne_ceny_mleka
+	ON prumerne_mzdy.rok = prumerne_ceny_mleka.rok
+JOIN prumerne_ceny_chleba
+	ON prumerne_mzdy.rok = prumerne_ceny_chleba.rok
 ORDER BY 	
 	rok;

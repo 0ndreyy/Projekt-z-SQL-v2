@@ -2,16 +2,16 @@ CREATE TABLE t_ondrej_petru_project_SQL_primary_final AS
 WITH
 prumerne_mzdy AS (
 	SELECT 
-		cp.payroll_year AS rok,
-		cp.industry_branch_code AS kod_odvetvi,
-		cpib.name AS odvetvi,		
-		ROUND(AVG(cp.value::numeric), 2) AS prumerna_mzda
-	FROM czechia_payroll AS cp
-	LEFT JOIN czechia_payroll_industry_branch AS cpib
-		ON cp.industry_branch_code = cpib.code
+		czechia_payroll.payroll_year AS rok,
+		czechia_payroll.industry_branch_code AS kod_odvetvi,
+		czechia_payroll_industry_branch.name AS odvetvi,		
+		AVG(czechia_payroll.value)::numeric AS prumerna_mzda
+	FROM czechia_payroll
+	LEFT JOIN czechia_payroll_industry_branch
+		ON czechia_payroll.industry_branch_code = czechia_payroll_industry_branch.code
 	WHERE
-		cp.industry_branch_code IS NOT NULL
-		AND cp.value_type_code = 5958
+		czechia_payroll.industry_branch_code IS NOT NULL
+		AND czechia_payroll.value_type_code = 5958
 	GROUP BY
 		odvetvi,
 		kod_odvetvi,
@@ -19,36 +19,36 @@ prumerne_mzdy AS (
 ),
 prumerne_ceny_potravin AS (
 	SELECT 
-		EXTRACT(YEAR FROM cp.date_from) AS rok,
-		cp.category_code AS kod_potraviny,
-		cpc.name AS potravina,
-		ROUND(AVG(cp.value::numeric), 2) AS prumerna_cena
-	FROM czechia_price AS cp
-	LEFT JOIN czechia_price_category AS cpc
-		ON cp.category_code = cpc.code
+		EXTRACT(YEAR FROM czechia_price.date_from) AS rok,
+		czechia_price.category_code AS kod_potraviny,
+		czechia_price_category.name AS potravina,
+		AVG(czechia_price.value)::numeric AS prumerna_cena
+	FROM czechia_price
+	LEFT JOIN czechia_price_category
+		ON czechia_price.category_code = czechia_price_category.code
 	WHERE
-		cp.category_code IS NOT NULL
+		czechia_price.category_code IS NOT NULL
 	GROUP BY
 		potravina,
 		kod_potraviny,
 		rok
 )
 SELECT
-	pm.rok AS rok,
-	pm.odvetvi AS odvetvi,
-	pm.prumerna_mzda AS prumerna_mzda,
+	prumerne_mzdy.rok AS rok,
+	prumerne_mzdy.odvetvi AS odvetvi,
+	prumerne_mzdy.prumerna_mzda AS prumerna_mzda,
 	NULL AS potravina,
 	NULL AS prumerna_cena
-FROM prumerne_mzdy AS pm
-JOIN prumerne_ceny_potravin AS pcp
-	ON pm.rok = pcp.rok
+FROM prumerne_mzdy
+JOIN prumerne_ceny_potravin
+	ON prumerne_mzdy.rok = prumerne_ceny_potravin.rok
 UNION
 SELECT
-	pcp.rok as rok,
+	prumerne_ceny_potravin.rok as rok,
 	NULL AS odvetvi,
 	NULL AS prumerna_mzda,
-	pcp.potravina,
-	pcp.prumerna_cena
-FROM prumerne_ceny_potravin AS pcp
-JOIN prumerne_mzdy as pm
-	ON pcp.rok = pm.rok;
+	prumerne_ceny_potravin.potravina,
+	prumerne_ceny_potravin.prumerna_cena
+FROM prumerne_ceny_potravin
+JOIN prumerne_mzdy
+	ON prumerne_ceny_potravin.rok = prumerne_mzdy.rok;

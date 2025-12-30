@@ -20,15 +20,15 @@ rusty AS (
 	SELECT
 		hdp_czechia.rok AS rok,
 		-- procentualni mezirocni rust HDP 
-		(hdp_czechia.hdp / LAG(hdp_czechia.hdp, 1, NULL) OVER (ORDER BY hdp_czechia.rok) - 1) * 100 AS rust_hdp,
+		ROUND(((hdp_czechia.hdp / LAG(hdp_czechia.hdp, 1, NULL) OVER (ORDER BY hdp_czechia.rok) - 1) * 100)::numeric, 2) AS rust_hdp,
 		-- procentualni mezirocni rust prumerne mzdy
-		(prumerne_mzdy.prumerna_mzda / LAG(prumerne_mzdy.prumerna_mzda, 1, NULL) OVER (ORDER BY prumerne_mzdy.rok) - 1) * 100 AS rust_mezd,
+		ROUND((prumerne_mzdy.prumerna_mzda / LAG(prumerne_mzdy.prumerna_mzda, 1, NULL) OVER (ORDER BY prumerne_mzdy.rok) - 1) * 100, 2) AS rust_mezd,
 		-- procentualni mezirocni rust prumerne ceny
-		(prumerne_ceny.prumerna_cena / LAG(prumerne_ceny.prumerna_cena, 1, NULL) OVER (ORDER BY prumerne_ceny.rok) - 1) * 100 AS rust_cen,
+		ROUND((prumerne_ceny.prumerna_cena / LAG(prumerne_ceny.prumerna_cena, 1, NULL) OVER (ORDER BY prumerne_ceny.rok) - 1) * 100, 2) AS rust_cen,
 		-- procentualni mezirocni rust prumerne mzdy nasledujici rok
-		(LEAD(prumerne_mzdy.prumerna_mzda) OVER (ORDER BY prumerne_mzdy.rok) / prumerne_mzdy.prumerna_mzda - 1) * 100 AS rust_mezd_nasledujici_rok,
+		ROUND((LEAD(prumerne_mzdy.prumerna_mzda) OVER (ORDER BY prumerne_mzdy.rok) / prumerne_mzdy.prumerna_mzda - 1) * 100, 2) AS rust_mezd_nasledujici_rok,
 		-- procentualni mezirocni rust prumerne ceny nasledujici rok
-		(LEAD(prumerne_ceny.prumerna_cena) OVER (ORDER BY prumerne_ceny.rok) / prumerne_ceny.prumerna_cena - 1) * 100 AS rust_cen_nasledujici_rok
+		ROUND((LEAD(prumerne_ceny.prumerna_cena) OVER (ORDER BY prumerne_ceny.rok) / prumerne_ceny.prumerna_cena - 1) * 100, 2) AS rust_cen_nasledujici_rok
 	FROM hdp_czechia
 	JOIN prumerne_mzdy
 		ON hdp_czechia.rok = prumerne_mzdy.rok
