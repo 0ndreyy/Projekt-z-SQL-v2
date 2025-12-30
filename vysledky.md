@@ -47,7 +47,7 @@ Na základě dostupných dat je viditelná deflace u potraviny cukr krystalový,
 
 ### 4. Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 V analyzovaném období takový rok neexistuje. Největší rozdíl v meziročním růstu potravin a mezd byl v roce 2013 a činil 6,66 procentního bodu. V daném roce mzdy meziročně klesly o 1,56 % a ceny potravin meziročně vzrostly o 5,10 %.
-Naopak, nejnižší rozdíl byl v roce 2009, když mzdy vzrostly o 3,16 %, ceny klesly o 6,42 % a rozdíl činil -9,58 procentního bodu.
+Naopak, nejnižší rozdíl byl v roce 2009, když mzdy vzrostly o 3,16 %, ceny klesly o 6,41 % a rozdíl činil -9,57 procentního bodu.
 
 ### 5. Má výše HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
 Na základě dostupných dat není možné tuto závislost jednoznačně potvrdit.
@@ -57,7 +57,7 @@ Meziroční růst mezd v daných rocích byl 6,84 % a 2,51 %, meziroční růst 
 Meziroční růst cen potravin v daných rocích byl 6,76 % a -0,55 %, meziroční růst cen o rok později byl 6,19 % a -1,19 %.
 Takže zatímco růst HDP byl v daných rocích podobný, růsty mezd i cen se výrazně lišily.
 
-Stejně tak je možné najít roky, kdy byl meziroční růst HDP výrazně menší než v rocích z předchozího příkladu (2,69 % v roce 2008 a 3,2 % v roce 2018), ale meziroční růst mezd v daných letech byl vyšší (7,87 %, resp. 7,62 %).
+Stejně tak je možné najít roky, kdy byl meziroční růst HDP výrazně menší než v rocích z předchozího příkladu (2,69 % v roce 2008 a 3,20 % v roce 2018), ale meziroční růst mezd v daných letech byl vyšší (7,87 %, resp. 7,62 %).
 
 ## Závěr
 Vstupní data obsahovaly údaje o mzdách za období roku 2000 až 2021 a údaje o cenách za období roku 2006 až 2018. Odpovědi na otázky proto byly postavené na údajích za společné roky - 2006 až 2018. Údaje za tyto roky obsahovaly všechny informace potřebné na zodpovězení výzkumných otázek.

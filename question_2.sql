@@ -25,7 +25,7 @@ SELECT
 	prumerne_mzdy.rok,
 	ROUND(prumerne_mzdy.prumerna_mzda, 2) AS prumerna_mzda,
 	ROUND((prumerne_mzdy.prumerna_mzda / prumerne_ceny_mleka.prumerna_cena), 2) AS pocet_l_mleka,
-	ROUND((prumerne_mzdy.prumerna_mzda / prumerne_ceny_chleba.prumerna_cena), 2) AS pocet_ks_chleba
+	ROUND((prumerne_mzdy.prumerna_mzda / prumerne_ceny_chleba.prumerna_cena), 2) AS pocet_kg_chleba
 FROM prumerne_mzdy
 JOIN prumerne_ceny_mleka
 	ON prumerne_mzdy.rok = prumerne_ceny_mleka.rok
